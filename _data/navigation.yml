@@ -7,4 +7,7 @@ main:
     url: /projects/
 
   - title: "CV"
-    url: /cv/cv_atteveldt.pdf
+    url: /files/cv_atteveldt.pdf
+
+  - title: "Computational Methods"
+    url: /cm/
