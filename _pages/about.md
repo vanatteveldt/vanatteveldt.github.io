@@ -2,11 +2,10 @@
 permalink: / 
 title: "Wouter van Atteveldt - Computational Communication Science & Political Communication"
 excerpt: "About me"
-author_profile: true redirect_from:
-
+author_profile: true 
+redirect_from:
 - /about/
 - /about.html
-
 ---
 
 I am an interdisciplinary scientist by training, having received my M.Sc. in Artificial Intelligence from the University
