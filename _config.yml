@@ -81,11 +81,11 @@ analytics:
 # Site Author
 author:
   name             : "Wouter van Atteveldt"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  avatar           : "wouter_van_atteveldt.jpg"
+  bio              : "Professor of Computational Communication Science & Political Communication"
   location         : "VU Amsterdam"
   employer         :
-  pubmed           : 
+  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=_La06r4AAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
