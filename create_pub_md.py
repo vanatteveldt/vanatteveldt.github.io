@@ -6,7 +6,7 @@ def format(x):
 
 
 def to_md(entry):
-    title = format(entry.fields['title'])
+    title = format(entry.fields['title']).strip(".")
     url = entry.fields.get('url')
     if url:
         title = f"[{title}]({url})"
@@ -14,7 +14,17 @@ def to_md(entry):
     authors = names(entry.persons['author'])
     md = f'- {authors} ({year}), {title}'
     if entry.type == 'book':
-        md += f" {entry.fields['address']}: {entry.fields['publisher']}"
+        md += f". {entry.fields['address']}: {entry.fields['publisher']}"
+    elif entry.type == 'article':
+        md += f". *{entry.fields['journal']}*, "
+        if 'volume' in entry.fields:
+            md += entry.fields['volume']
+        if 'number' in entry.fields:
+            md += f"({entry.fields['number']})"
+        if 'pages' in entry.fields:
+            md += f", {entry.fields['pages']})"
+    if doi := entry.fields.get('doi'):
+        md += f". [doi.org/{doi}](https://doi.org/{doi})"
     return -year, md
 
 
@@ -45,7 +55,9 @@ permalink: /publications/
 author_profile: true
 ---
 """, file=w)
-for fn in ['cv/books.bib']:
+for section, fn in [("Books", 'cv/books.bib'),
+                    ("Journal Articles", 'cv/articles.bib')]:
+    w.write(f"## {section}\n\n")
     for entry in get_entries(fn):
         print(entry)
         w.write(entry)
