@@ -59,7 +59,7 @@ author_profile: true
 """, file=w)
 for section, fn in [("Books", 'cv/books.bib'),
                     ("Journal Articles", 'cv/articles.bib')]:
-    w.write(f"## {section}\n\n")
+    w.write(f"\n\n## {section}\n\n")
     for entry in get_entries(fn):
         print(entry)
         w.write(entry)

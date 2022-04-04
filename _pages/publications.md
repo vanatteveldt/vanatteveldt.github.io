@@ -5,11 +5,15 @@ permalink: /publications/
 author_profile: true
 ---
 
+
+
 ## Books
 
 - Wouter Van Atteveldt, Damian Trilling & Carlos Arcila (2021), [Computational Analysis of Communication: A practical introduction to the analysis of texts, networks, and images with code examples in Python and R](http://cssbook.net), Hoboken, NJ: Wiley-Blackwell
 - Wouter Van Atteveldt (2008), [Semantic Network Analysis: Techniques for Extracting, Representing, and Querying Media Content (dissertation)](https://vanatteveldt.com/files/vanatteveldt_semanticnetworkanalysis.pdf), Charleston, SC: BookSurge
 - Jan Kleinnijenhuis, Otto Scholten, Wouter Van Atteveldt, Anita Van Hoof, Andre Krouwel, Dirk Oegema, Jan De Ridder, Nel Ruigrok & Janet Takens (2007), Nederland vijfstromenland: De rol van media en stemwijzers bij de verkiezingen van 2006, Amsterdam: Bert Bakker
+
+
 ## Journal Articles
 
 - Abraham Bernstein, Claes Vreese, Natali Helberger, Wolfgang Schulz, Katharina Zweig, Christian Baden, Michael Beam, Marc Hauer, Lucien Heitz, Pascal Jürgens, Christian Katzenbach, Benjamin Kille, Beate Klimkiewicz, Wiebke Loosen, Judith Moeller, Goran Radanovic, Guy Shani, Nava Tintarev, Suzanne Tolmeijer, Wouter Van Atteveldt, Sanne Vrijenhoek & Theresa Zueger (2021), Diversity in News Recommendations, *Dagstuhl Manifestos*, 9 (1), 43--61, [doi.org/doi.org/10.4230/DagMan.9.1.43](https://doi.org/doi.org/10.4230/DagMan.9.1.43)
