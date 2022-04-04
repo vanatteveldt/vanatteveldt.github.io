@@ -1,5 +1,6 @@
 ---
-permalink: / title: "Wouter van Atteveldt - Computational Communication Science & Political Communication"
+permalink: / 
+title: "Wouter van Atteveldt - Computational Communication Science & Political Communication"
 excerpt: "About me"
 author_profile: true redirect_from:
 
