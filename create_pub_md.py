@@ -2,7 +2,7 @@ from pybtex.database import parse_file
 
 
 def format(x):
-    return x.replace("{", "").replace("}", "")
+    return x.replace("{", "").replace("}", "").replace("\\&", "&")
 
 
 def to_md(entry):
@@ -12,19 +12,21 @@ def to_md(entry):
         title = f"[{title}]({url})"
     year = int(entry.fields['year'])
     authors = names(entry.persons['author'])
-    md = f'- {authors} ({year}), {title}'
+    fields = [f'{authors} ({year})', title]
     if entry.type == 'book':
-        md += f". {entry.fields['address']}: {entry.fields['publisher']}"
+        fields += [f"{entry.fields['address']}: {entry.fields['publisher']}"]
     elif entry.type == 'article':
-        md += f". *{entry.fields['journal']}*, "
+        fields += [f"*{entry.fields['journal']}*"]
         if 'volume' in entry.fields:
-            md += entry.fields['volume']
-        if 'number' in entry.fields:
-            md += f"({entry.fields['number']})"
+            vol = entry.fields['volume']
+            if 'number' in entry.fields:
+                vol = f"{vol} ({entry.fields['number']})"
+            fields += [vol]
         if 'pages' in entry.fields:
-            md += f", {entry.fields['pages']})"
+            fields += [f"{entry.fields['pages']}"]
     if doi := entry.fields.get('doi'):
-        md += f". [doi.org/{doi}](https://doi.org/{doi})"
+        fields += [f"[doi.org/{doi}](https://doi.org/{doi})"]
+    md = f'- {", ".join(fields)}'
     return -year, md
 
 
