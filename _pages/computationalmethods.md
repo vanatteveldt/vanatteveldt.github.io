@@ -13,4 +13,4 @@ Blurb: _In disciplines such as political science, sociology, psychology, and med
 # R Teaching Materials
 
 Kasper Welbers and I developed a lot of handouts, videos and tutorials on using R for data wrangling, text analysis, and machine learning.
-Check out these materials on [our github page](https://github.com/vanatteveldt/r-course-material)
+Check out these materials on [our github page](https://github.com/ccs-amsterdam/r-course-material)

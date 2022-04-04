@@ -1,13 +1,13 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "Computational Methods"
+    url: /cm/
 
   - title: "Projects"
     url: /projects/
 
+  - title: "Publications"
+    url: /publications/
+
   - title: "CV"
     url: /files/cv_atteveldt.pdf
-
-  - title: "Computational Methods"
-    url: /cm/

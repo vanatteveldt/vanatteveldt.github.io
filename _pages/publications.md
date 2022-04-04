@@ -5,12 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
-
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+- {Computational Analysis of Communication: A practical introduction to the analysis of texts, networks, and images with code examples in Python and R} (2021)
+- Semantic Network Analysis: Techniques for Extracting, Representing, and Querying Media Content (dissertation) (2008)
+- Nederland vijfstromenland: De rol van media en stemwijzers bij de verkiezingen van 2006 (2007)
