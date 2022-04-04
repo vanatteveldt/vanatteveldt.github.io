@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/exrYU5jcimE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
 
 I am an interdisciplinary scientist by training, having received my M.Sc. in Artificial Intelligence from the University
 of Edinburgh and a joint Ph.D. in Artificial Intelligence and Communication Science from the VU Amsterdam. In the decade
