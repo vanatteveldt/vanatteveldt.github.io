@@ -1,0 +1,75 @@
+% Set of commands used by cv.tex
+
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{simplemargins}
+\usepackage{graphicx}
+\usepackage{soul}
+\usepackage{tweaklist}
+\usepackage{charter}
+\usepackage[scaled]{helvet}
+\usepackage{sectsty}
+\usepackage{engord}
+\usepackage{url}
+
+%\usepackage{natbib}
+%\def\bibsection{\subsection*{\refname}} 
+
+\sectionfont{\normalfont\blocktitle}
+\subsectionfont{\normalfont\pubsect}
+\setcounter{secnumdepth}{0}
+\setleftmargin{3.0cm}
+\setrightmargin{3.0cm}
+\settopmargin{3cm}
+\setbottommargin{0cm}
+\newcommand{\nth}[1]{\engordnumber{#1}}
+
+% small caps
+\newcommand{\smcp}[1]{\sc{\scriptsize{#1}}}
+\renewcommand{\textsc}[1]{\smcp{#1}}
+
+\newcommand{\header}[2]{
+\begin{centering} 
+{\textsc{\so{CURRICULUM VITAE}}}
+\\\vspace*{5mm}
+{\textsf{\large{#1}}}
+\\\vspace*{5mm}
+{\textsc{\so{#2}}}
+
+\end{centering}
+}
+
+
+\newcommand{\bold}[1]{{\textbf{#1}}}
+\newcommand{\italics}[1]{{\textit{\footnotesize #1}}}
+
+\newcommand{\blocktitle}[1]{%
+\textcolor{MidnightBlue}{\textsf{\large \hspace{1.4mm}#1}}
+\vspace{1mm}
+\hrule\par\mbox{}
+}
+
+\newcommand{\pubsect}[1]{%
+\vspace{-1em}\textcolor{MidnightBlue}{\textsf{\normalsize\center #1}}
+\vspace{1mm}
+%\hrule\par\mbox{}
+}
+
+\newcommand{\yearhead}[2]{\parbox[t]{4cm}{\textsf{\small #1}} \parbox[t]{13cm}{\textsf{#2}}}
+\newcommand{\body}[1]{\mbox{}\hspace{4.5cm}\parbox[t]{10.5cm}{\small #1}}
+
+\newcommand{\resumeitem}[3]{\yearhead{#1}{\bold{#2}}\\*\body{#3}\vspace{.3em}}
+\newcommand{\simpleresumeitem}[2]{\yearhead{#1}{#2}}
+\newcommand{\resumeitemize}[3]{\resumeitem{#1}{#2}{\vspace{-1em}\begin{itemize}#3\end{itemize}}}
+
+
+\newcommand{\bodyb}[1]{\mbox{}\hspace{1.5cm}\parbox[t]{13.5cm}{\small #1}}
+\newcommand{\resumeitemb}[2]{\bold{\textsf{#1}}\\\bodyb{#2}\vspace{.3em}}
+\newcommand{\resumeitemizeb}[2]{\resumeitemb{#1}{\vspace{-1em}\begin{itemize}#2\end{itemize}}}
+%%%%%%
+
+\setlength{\parindent}{0mm}
+\pagestyle{empty}
+
+\renewcommand{\itemhook}{\setlength{\topsep}{0pt}%
+  \setlength{\itemsep}{-0mm}\setlength{\leftmargin}{1em}}
+\renewcommand{\labelitemi}{-}
