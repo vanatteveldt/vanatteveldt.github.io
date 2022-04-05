@@ -8,7 +8,8 @@ def format(x):
 def to_md(entry):
     title = format(entry.fields['title']).strip(".")
     url = entry.fields.get('url')
-    if url:
+    doi = entry.fields.get('doi')
+    if url and (not doi or doi not in url):
         title = f"[{title}]({url})"
     year = int(entry.fields['year'])
     authors = names(entry.persons['author'])
@@ -24,8 +25,10 @@ def to_md(entry):
             fields += [vol]
         if 'pages' in entry.fields:
             fields += [f"{entry.fields['pages']}"]
-    if doi := entry.fields.get('doi'):
+    if doi:
         fields += [f"[doi.org/{doi}](https://doi.org/{doi})"]
+    if not (doi or url):
+        print(f"Warning: no doi or url in {entry.key}")
     md = f'- {", ".join(fields)}'
     return -year, md
 
@@ -61,6 +64,5 @@ for section, fn in [("Books", 'cv/books.bib'),
                     ("Journal Articles", 'cv/articles.bib')]:
     w.write(f"\n\n## {section}\n\n")
     for entry in get_entries(fn):
-        print(entry)
         w.write(entry)
         w.write("\n")
