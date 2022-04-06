@@ -25,11 +25,29 @@ def to_md(entry):
             fields += [vol]
         if 'pages' in entry.fields:
             fields += [f"{entry.fields['pages']}"]
+    elif entry.type == "incollection":
+        booktitle = f"*{entry.fields['booktitle']}*"
+        if ed := entry.persons.get('editor'):
+            fields += [f"In: {names(ed)} (ed.)"]
+        else:
+            booktitle = f"In: {booktitle}"
+        fields += [booktitle]
+        if pub := entry.fields.get('publisher'):
+            if 'address' in entry.fields:
+                pub = f"{entry.fields['address']}: {pub}"
+            fields += [pub]
+
+    elif entry.type == 'misc':
+        fields += [entry.fields['howpublished']]
+    else:
+        print(f"Warning: unknown type {entry.type}")
     if doi:
         fields += [f"[doi.org/{doi}](https://doi.org/{doi})"]
     if not (doi or url):
         print(f"Warning: no doi or url in {entry.key}")
     md = f'- {", ".join(fields)}'
+    if entry.type == 'misc':
+        print(md)
     return -year, md
 
 
@@ -61,7 +79,8 @@ author_profile: true
 ---
 """, file=w)
 for section, fn in [("Books", 'cv/books.bib'),
-                    ("Journal Articles", 'cv/articles.bib')]:
+                    ("Journal Articles", 'cv/articles.bib'),
+                    ("Book chapters and other publications", 'cv/other.bib')]:
     w.write(f"\n\n## {section}\n\n")
     for entry in get_entries(fn):
         w.write(entry)
