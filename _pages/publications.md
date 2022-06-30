@@ -50,6 +50,7 @@ author_profile: true
 - Wouter Van Atteveldt, Jan Kleinnijenhuis & Nel Ruigrok (2008), Parsing, Semantic Networks, and Political Authority: Using syntactic analysis to extract semantic relations from Dutch newspaper articles, *Political Analysis*, 16 (4), 428--446, [doi.org/10.1093/pan/mpn006](https://doi.org/10.1093/pan/mpn006)
 - Wouter Van Atteveldt, Jan Kleinnijenhuis, Nel Ruigrok & Stefan Schlobach (2008), Good News or Bad News? Conducting sentiment analysis on Dutch text to distinguish between positive and negative relations, *Journal of Information Technology and Politics*, 5 (1), 73--94, [doi.org/10.1080/19331680802154145](https://doi.org/10.1080/19331680802154145)
 - Nel Ruigrok & Wouter Van Atteveldt (2007), Global Angling with a Local Angle: How U.S., British, and Dutch Newspapers Frame Global and Local Terrorist Attacks, *The Harvard International Journal of Press/Politics*, 12, 68--90, [doi.org/10.1177/1081180X06297436](https://doi.org/10.1177/1081180X06297436)
+- Nicolas Mattis, Philipp Masur, Judith Möller & Wouter Van Atteveldt (0), Nudging towards news diversity: A theoretical framework for facilitating diverse news consumption through recommender design, *New Media \& Society*, 0 (0), 14614448221104413, [doi.org/10.1177/14614448221104413](https://doi.org/10.1177/14614448221104413)
 
 
 ## Book chapters and other publications
