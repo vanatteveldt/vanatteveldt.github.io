@@ -11,6 +11,8 @@ def to_md(entry):
     doi = entry.fields.get('doi')
     if url and (not doi or doi not in url):
         title = f"[{title}]({url})"
+    if 'year' not in entry.fields:
+        raise KeyError(f"Entry '{entry.key}' is missing a 'year' field (fields: {list(entry.fields.keys())})")
     year = int(entry.fields['year'])
     authors = names(entry.persons['author'])
     fields = [f'{authors} ({year})', title]
